@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d58d92ff1ae409cb34d8a0d6f34943a" Name="Diagram1">
+        <EntityTypeShape EntityType="ArsivModel.İslem" Width="1.5" PointX="11.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArsivModel.Kitaplar" Width="1.5" PointX="5.875" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArsivModel.Turler" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArsivModel.Uyeler" Width="1.5" PointX="8.375" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArsivModel.Yazarlar" Width="1.5" PointX="3.25" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="ArsivModel.FK_İslem_Kitaplar" ManuallyRouted="false" />
+        <AssociationConnector Association="ArsivModel.FK_İslem_Uyeler" ManuallyRouted="false" />
+        <AssociationConnector Association="ArsivModel.FK_Kitaplar_Turler" ManuallyRouted="false" />
+        <AssociationConnector Association="ArsivModel.FK_Kitaplar_Yazarlar" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ArsivModel.Kullanici" Width="1.5" PointX="0.75" PointY="2.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

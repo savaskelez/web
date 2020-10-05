@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArsivModelStoreContainer" CdmEntityContainer="ArsivEntities">
+    <EntitySetMapping Name="İslem">
+      <EntityTypeMapping TypeName="ArsivModel.İslem">
+        <MappingFragment StoreEntitySet="İslem">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Uye_id" ColumnName="Uye_id" />
+          <ScalarProperty Name="Kitap_id" ColumnName="Kitap_id" />
+          <ScalarProperty Name="atarih" ColumnName="atarih" />
+          <ScalarProperty Name="vtarih" ColumnName="vtarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kitaplar">
+      <EntityTypeMapping TypeName="ArsivModel.Kitaplar">
+        <MappingFragment StoreEntitySet="Kitaplar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Kitapadı" ColumnName="Kitapadı" />
+          <ScalarProperty Name="Tur_id" ColumnName="Tur_id" />
+          <ScalarProperty Name="basimyili" ColumnName="basimyili" />
+          <ScalarProperty Name="sayfasayisi" ColumnName="sayfasayisi" />
+          <ScalarProperty Name="Yazar_id" ColumnName="Yazar_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turler">
+      <EntityTypeMapping TypeName="ArsivModel.Turler">
+        <MappingFragment StoreEntitySet="Turler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Turismi" ColumnName="Turismi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uyeler">
+      <EntityTypeMapping TypeName="ArsivModel.Uyeler">
+        <MappingFragment StoreEntitySet="Uyeler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Dtarih" ColumnName="Dtarih" />
+          <ScalarProperty Name="Gsm" ColumnName="Gsm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yazarlar">
+      <EntityTypeMapping TypeName="ArsivModel.Yazarlar">
+        <MappingFragment StoreEntitySet="Yazarlar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanici">
+      <EntityTypeMapping TypeName="ArsivModel.Kullanici">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

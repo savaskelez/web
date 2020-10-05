@@ -1,0 +1,34 @@
+﻿@model arsiv.ViewModels.KitaplarFormViewModel
+@{
+    ViewBag.Title = "KitaplarForm";
+    Layout = "~/Views/shared/_Layout.cshtml";
+}
+
+<h2>Yeni Kitap</h2>
+@using (Html.BeginForm("Kaydet", "Kitaplar", FormMethod.Post))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Kitaplar.Kitapadı)
+        @Html.TextBoxFor(m => m.Kitaplar.Kitapadı, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Kitaplar.Tur_id)
+        @Html.DropDownListFor(m => m.Kitaplar.Tur_id, new SelectList(Model.Turlers, "ID", "Turismi"),new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Kitaplar.basimyili)
+        @Html.TextBoxFor(m => m.Kitaplar.basimyili, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Kitaplar.sayfasayisi)
+        @Html.TextBoxFor(m => m.Kitaplar.sayfasayisi, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Kitaplar.Yazar_id)
+        @Html.DropDownListFor(m => m.Kitaplar.Yazar_id, new SelectList(Model.Yazarlars, "ID", "AdSoyad"),new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m=>m.Kitaplar.ID)
+    <button type="submit" clsass="btn btn-secondary">Kaydet</button>
+}
+

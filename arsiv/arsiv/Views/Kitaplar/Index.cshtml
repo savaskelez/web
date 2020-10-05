@@ -1,0 +1,38 @@
+﻿
+@model List<arsiv.Models.EntityFramework.Kitaplar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_Layout.cshtml";
+}
+@Html.ActionLink("Yeni Kitap Kaydı","Yeni",null,new {@class="btn btn-success" })
+<h2>Kitap Listesi</h2>
+
+<table class="table table-bordered" id="tblKitaplar">
+    <thead>
+        <tr>
+            <th>Kitap No</th>
+            <th>Kitapadı</th>
+            <th>Türü</th>
+            <th>basimyili</th>
+            <th>sayfasayisi</th>
+            <th>Yazar Adı</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kitaplar in Model)
+        {
+            <tr>
+                <td>@kitaplar.ID</td>
+                <td>@kitaplar.Kitapadı</td>
+                <td>@kitaplar.Turler.Turismi</td>
+                <td>@kitaplar.basimyili</td>
+                <td>@kitaplar.sayfasayisi</td>
+                <td>@kitaplar.Yazarlar.AdSoyad</td>
+                <td>@Html.ActionLink("Güncelle","Guncelle",new{id = kitaplar.ID},new {@class = "btn btn-success"})</td>
+                <td>@Html.ActionLink("Sil", "Sil", new { id = kitaplar.ID }, new { @class = "btn btn-danger" })</td>
+            </tr>
+        }
+    </tbody>
+</table>

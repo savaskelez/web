@@ -1,0 +1,22 @@
+﻿@model arsiv.Models.EntityFramework.İslem
+@{
+    ViewBag.Title = "Kaydet";
+    Layout = "~/Views/shared/_Layout.cshtml";
+}
+<h2>Yeni İslem</h2>
+@using (Html.BeginForm("Yeni", "İslem", FormMethod.Post))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Uye_id)
+        @Html.TextBoxFor(m => m.Uye_id, new { @class = "form-control" })
+        @Html.LabelFor(m => m.Kitap_id)
+        @Html.TextBoxFor(m => m.Kitap_id, new { @class = "form-control" })
+        @Html.LabelFor(m => m.atarih)
+        @Html.TextBoxFor(m => m.atarih, new { @class = "form-control" })
+        @Html.LabelFor(m => m.vtarih)
+        @Html.TextBoxFor(m => m.vtarih, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.ID)
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+}

@@ -1,0 +1,39 @@
+﻿@using arsiv.Models.EntityFramework
+@model List<İslem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a class="btn btn-outline-primary" href="/İslem/Yeni">Yeni İslemler</a>
+<a class="btn btn-outline-primary" href="/Kitaplar/Index">Kitap İslemleri</a>
+<a class="btn btn-outline-primary" href="/Yazarlar/Index">Yazar İslemleri</a>
+<a class="btn btn-outline-primary" href="/Turler/Index">Kategori İslemleri</a>
+<h2>İslemler</h2>
+
+<table class="table table-bordered" id="tblIslemler">
+    <thead>
+        <tr>
+            <th>İşlem No</th>
+            <th>Uye Ad Soyad</th>
+            <th>Kitap adı</th>
+            <th>Alınan Tarih</th>
+            <th>Vereceği Tarih</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var İslem in Model)
+        {
+            <tr>
+                <td>@İslem.ID</td>
+                <td>@İslem.Uyeler.AdSoyad</td>
+                <td>@İslem.Kitaplar.Kitapadı</td>
+                <td>@İslem.atarih.Value.ToString("dd.MM.yyyy")</td>
+                <td>@İslem.vtarih.Value.ToString("dd.MM.yyyy")</td>
+                <td><a class="btn btn-primary" href="/İslem/Guncelle/@İslem.ID">Güncelle</a></td>
+                <td><a class="btn btn-danger" href="/İslem/Sil/@İslem.ID">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

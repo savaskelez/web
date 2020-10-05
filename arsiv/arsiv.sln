@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arsiv", "arsiv\arsiv.csproj", "{D2450A91-E819-45AD-9EE9-0F0280672D6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2450A91-E819-45AD-9EE9-0F0280672D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2450A91-E819-45AD-9EE9-0F0280672D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2450A91-E819-45AD-9EE9-0F0280672D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2450A91-E819-45AD-9EE9-0F0280672D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A273D698-D139-4554-B726-99B1137AF2D7}
+	EndGlobalSection
+EndGlobal
